@@ -1,9 +1,11 @@
 using OrusFinancas.Components;
+using Microsoft.AspNetCore.Components.WebAssembly.Server; // <-- Adicionando o using específico
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Adiciona os serviços Blazor (UI) e de Componentes
-builder.Services.AddRazorComponents();
+builder.Services.AddRazorComponents().AddInteractiveWebAssemblyRenderMode()
+
 
 // 1. Adiciona o suporte a Controllers API (o C do MVC/API)
 builder.Services.AddControllers(); 
@@ -12,6 +14,7 @@ builder.Services.AddControllers();
 // **CORREÇÃO TEMPORÁRIA:** Alterado para a porta HTTP (5067) para contornar problemas de certificado HTTPS/confiança.
 // Assim que o certificado for confiável (passo 2), isso deve ser revertido para HTTPS (7145).
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5067/") });
+
 
 var app = builder.Build();
 
@@ -31,6 +34,8 @@ app.UseAntiforgery();
 app.MapControllers();
 
 // Mapeia os componentes Blazor
-app.MapRazorComponents<App>();
+// CORREÇÃO AQUI: Usamos uma sobrecarga que, com as referências do .csproj, funciona
+app.MapRazorComponents<App>()
+    .AddInteractiveWebAssemblyRenderMode(); 
 
 app.Run();

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrusFinancas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0853cc7a6ec5f475f1123402f9c633c98a50e9a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6498dde3c8939c010461c30158d19805c3da5038")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrusFinancas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrusFinancas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

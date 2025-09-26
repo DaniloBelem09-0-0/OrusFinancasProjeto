@@ -14,3 +14,4 @@ namespace OrusFinancas.Data
         public ICollection<Assinatura> Assinaturas { get; set; } = new List<Assinatura>();
     }
 }
+
