@@ -1,0 +1,50 @@
+# Arquivo .gitignore para projetos .NET Core/Blazor com Visual Studio
+
+############################
+# ASP.NET Core / .NET
+############################
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.log
+*.pfx
+*.vsix
+Packages/
+**/publish/
+**/temp/
+**/TestResults/
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Resharper / Rider
+*.DotSettings
+*.userprefs
+
+## Windows
+Thumbs.db
+Desktop.ini
+
+## Node.js (se você tiver bibliotecas front-end)
+node_modules/
+
+############################
+# Pastas de dependências específicas do .NET Core/Blazor
+############################
+# Pastas de cache e build do Blazor/Razor
+**/*.blazor.g.cs
+**/*.razor.g.cs
+wwwroot/dist/
+
+# Pasta de dependências de runtime
+runtimes/
+
+# Arquivos de configurações secretos (se não forem geridos por outro método)
+appsettings*.Development.json
