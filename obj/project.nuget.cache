@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jZKd8iM7Ao0=",
+  "success": true,
+  "projectFilePath": "/home/danilo/Orus Financas/OrusFinancas.csproj",
+  "expectedPackageFiles": [
+    "/home/danilo/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.8/microsoft.aspnetcore.app.ref.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

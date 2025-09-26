@@ -1,0 +1,28 @@
+﻿@page "/transacoes"
+@using OrusFinancas.Data
+@inject HttpClient Http
+
+<h3>Extrato Orus Finanças</h3>
+
+@if (transacoes == null)
+{
+    <p><em>Carregando dados...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var transacao in transacoes)
+        {
+            <li>@transacao.Data.ToShortDateString() - @transacao.Descricao: **@transacao.Valor.ToString("C")**</li>
+        }
+    </ul>
+}
+
+@code {
+    private Transacao[]? transacoes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        transacoes = await Http.GetFromJsonAsync<Transacao[]>("api/Transacoes");
+    }
+}
